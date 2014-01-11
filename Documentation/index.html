@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<title>BuzzLandi - Clean HTML5 Landing Page</title>
+	<!-- Framework CSS -->
+<link rel="stylesheet" href="style.css" media="screen" />
+<link href="assets/src/prettify.css" type="text/css" rel="stylesheet" />
+    <script src="assets/src/prettify.js" type="text/javascript"></script>
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:10px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+	<h1 align="center">BuzzLandi - Clean HTML5 Landing Page</h1>
+	<p class="subtitle">Created: 12/August/2013<br>
+					By: MegaDrupal<br>
+					Email: <a href="mailto:info@megadrupal.com">info@megadrupal.com</a><br>
+					Website: <a href="http://megadrupal.com">http://megadrupal.com</a><br>
+	<div class="separater"></div>
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a>
+      		<ol>
+                	<li><a href="#spotlight">Spotlight</a></li>
+                    <li><a href="#features">Features</a></li>
+                    
+                    <li><a href="#why">Why buzz</a></li>
+                    <li><a href="#pricingtable">Pricing table</a></li>
+                    <li><a href="#slideshow">Slideshow</a></li>
+                </ol>
+      </li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>			
+		</ol>
+		<div class="separater"></div>
+</div>
+<div class="wrapper">
+<h3 id="htmlStructure"><strong>I) HTML Structure</strong> - <a href="#toc">top</a></h3>
+<p>BuzzLandi is a 1120px fixed-width theme with indented and intuitively spaced HTML. You will find in-line commenting allthroughout the HTML so that you can always figure out what section of the layout you are in. The backbone of every page is as follows:</p>
+<pre id="normalpages" class="prettyprint lines">
+&lt;body>
+
+&lt;header>
+    &lt;div class="md-nav-wrap">
+        &lt;div id="md-navbar" class="md-navbar">
+            &lt;div class="wrap1120 clearfix">
+                &lt;div class="grid_16">
+                    &lt;div class="md-logo">
+                        {LOGO & SLOGAN}
+                    &lt;/div>
+                    &lt;nav id="nav" class="md-menu">
+                        {NAVIGATION}
+                    &lt;/nav>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;div id="md-spotlight" class="md-spotlight">
+        {SPOTLIGHT AREA}
+    &lt;/div>
+&lt;/header>
+
+&lt;div class="md-main-body">
+    &lt;section id="md-features" class="md-features">
+        &lt;div class="md-box">
+                &lt;div class="wrap1120">
+                    {FEATURES AREA}
+                &lt;/div>
+        &lt;/div>
+    &lt;/section>
+
+    &lt;section id="md-parallax-1" class="md-parallax-1">
+        &lt;div class="parallax-bg">&lt;/div>
+        &lt;div class="md-box">
+                &lt;div class="wrap1120">
+                    {PARALLAX AREA}
+                &lt;/div>
+        &lt;/div>
+    &lt;/section>
+
+    &lt;section id="md-different" class="md-different">
+        &lt;div class="md-box">
+                &lt;div class="wrap1120">
+                    {WHY BUZZ}
+                &lt;/div>
+        &lt;/div>
+    &lt;/section>
+
+    &lt;section id="md-parallax-2" class="md-parallax-2">
+        &lt;div class="parallax-bg">&lt;/div>
+        &lt;div class="md-box">
+                &lt;div class="wrap1120">
+                    {PARALLAX AREA}
+                &lt;/div>
+        &lt;/div>
+    &lt;/section>
+
+    &lt;section id="md-pricing" class="md-pricing">
+        &lt;div class="md-box">
+                &lt;div class="wrap1120">
+                    {PRICING TABLE}
+                &lt;/div>
+        &lt;/div>
+    &lt;/section>
+
+    &lt;section id="md-testimonials" class="md-parallax-3">
+        &lt;div class="parallax-bg">&lt;/div>
+        &lt;div class="md-box">
+                &lt;div class="wrap1120">
+                    {PARALLAX AREA}
+                &lt;/div>
+        &lt;/div>
+    &lt;/section>
+
+    &lt;section id="md-slideshow" class="md-slideshow">
+        &lt;div class="md-box">
+            {SLIDESHOW}
+        &lt;/div>
+    &lt;/section>
+&lt;footer class="md-footer">
+    {COPYRIGHT & SOCIAL ICONS}
+&lt;/footer>
+&lt;/div>
+&lt;/body>
+</pre>	
+<div class="separater"></div>
+
+<h6 id="spotlight">Spotlight</h6>
+<pre class="prettyprint lines">  
+&lt;div class="md-pt-slide">
+    {SPOTLIGHT IMAGE}
+&lt;/div>  
+&lt;div class="wrap1120">
+    &lt;div class="grid_16">
+        &lt;div class="md-intro"> 
+            {INTRO TEXT & CALL TO ACTION BUTTON}
+        &lt;/div>
+        &lt;div class="md-review">
+            &lt;div class="md-pt-review">
+                {PRODUCT IMAGE}
+            &lt;/div>
+            {PRODUCT POINTS AND DESCRIPTION}
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="clear">&lt;/div>
+&lt;/div>
+</pre>
+
+<div class="separater"></div>
+
+<h6 id="features">Features</h6>
+<pre class="prettyprint lines">  
+&lt;div class="grid_16 md-content">
+    {HEADER & DESCRIPTION TEXT}
+    &lt;div class="md-list-features clearfix">
+        &lt;div class="origami">
+            {FEATURE}
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+&lt;div class="clear">&lt;/div>
+</pre>
+
+<div class="separater"></div>
+
+<h6 id="features">Why buzz</h6>
+<pre class="prettyprint lines">  
+&lt;div class="grid_16 md-content">
+    {HEADER & DESCRIPTION TEXT}
+    &lt;div class="tabs-wrap clearfix">
+        &lt;nav class="tabs-inner">
+            {TABS}
+        &lt;/nav>
+        &lt;div id="accordion-rwd">
+            &lt;h3 class="rs title-tab">{ACCORDION HEADER}&lt;/h3> &lt;!-- show in responsive -->
+            {TAB CONTENT}
+        &lt;/div>
+    &lt;/div><!-- /.tabs-wrap -->
+&lt;/div>
+&lt;div class="clear">&lt;/div>
+</pre>
+
+<div class="separater"></div>
+
+<h6 id="features">Pricing table</h6>
+<pre class="prettyprint lines">  
+&lt;div class="grid_16 md-content">
+    {HEADER & DESCRIPTION TEXT}
+    &lt;div class="pricing-table clearfix">
+        &lt;div class="grid_4 ml135percent">
+            {PRICING TABLE COLUMN}
+        &lt;/div>
+    &lt;/div><!-- /.pricing-table -->
+&lt;/div>
+</pre>
+
+<div class="separater"></div>
+
+<h6 id="features">Slideshow</h6>
+<pre class="prettyprint lines">  
+&lt;div class="wrap1120">
+    &lt;div class="md-content">
+        {HEADER & DESCRIPTION TEXT}
+    &lt;/div>
+&lt;/div>
+&lt;div class="slideshow">
+    &lt;div class="md-content" >
+        &lt;div id="md-slider-3">
+            {SLIDE IMAGES}
+        &lt;/div>
+        &lt;div id="md-slider-3-ctrl">
+            {SLIDESHOW CONTROL}
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+</pre>
+
+</div><!--wrapper-->
+
+
+<div class="wrapper">
+<h3 id="cssFiles"><strong>II) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+<p>This theme uses <strong>style.css</strong> file as main CSS file.</p>
+		<h6>style.css</h6>
+		<p>Main CSS files in this theme is style.css that contains all of specific stylings for the theme.The file is separated into 13 sections using labels as follows:</p> 
+
+<pre class="prettyprint lines">		
+1.	Reset
+2.	960 Fluid Grid
+3.	Common css 
+4.	Header style
+5.	Main body style
+6.	Footer style
+7.  Icons
+8.	Button
+</pre>
+<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+		<h6>responsive.css</h6> 
+		<p>responsive.css contains styling for media queries that allows us to tailor to different resolutions and devices without changing the content. The file is separated into sections as follows:</p>
+		<pre class="prettyprint lines">	
+@media screen and (max-width: 1120px) {
+	
+{SOME CODES}
+
+}
+
+@media screen and (max-width: 1024px) {
+	
+{SOME CODES}
+
+}
+
+@media screen and (max-width: 800px) {
+
+{SOME CODES}
+
+}
+
+@media screen and (max-width: 760px) {
+
+{SOME CODES}
+
+}
+
+@media screen and (max-width: 565px) {
+
+{SOME CODES}
+
+}
+
+@media screen and (max-width: 350px) {
+
+{SOME CODES}
+
+}
+   </pre>	
+   <p>If you would like to edit styling of the specific device width, simply find the appropriate label in the <strong>responsive.css</strong> file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+   
+		<h4>Additional css files</h4>
+		<ol>
+            <li><strong>ie8.css</strong> - fix IE 8 problem</li>
+            <li><strong>orgami.css</strong> - Orgami feature effect</li>
+            <li><strong>normalize.css</strong> - HTML5 reset</li>
+            <li><strong>responsive.css</strong> - Responsive CSS</li>
+		</ol>
+</div><!--wrapper-->
+<div class="wrapper">
+<h3 id="javascript"><strong>III) JavaScript</strong> - <a href="#toc">top</a></h3>
+<p>This theme imports following Javascript files.</p>
+		
+		<ol>
+	<li><strong>jquery-1.9.1.min.js</strong> - Javascript library</li>
+	<li><strong>jquery-ui-1.10.3.custom</strong> - jQuery UI (custom build with tabs and accordion)</li>
+    <li><strong>jquery.cycle2.js</strong> - jQuery Cycle 2 for slideshow section</li>
+	  <li><strong>jquery.easing.js</strong> - jQuery easing</li>
+      <li><strong>jjuery.lavalamp.min</strong> - jQuery lavalamp - use in navigation</li>
+			<li><strong>jquery.scrollTo.js</strong> - Click to navigation link to scroll to element</li>
+      <li><strong>modernizr.js</strong> - Modernizr library</li>
+	  <li><strong>origami.js</strong> - Origami jQuery plugin, show services in features</li>
+	  <li><strong>responsive-nav.js</strong> - Responsive navigation jQuery plugin</li>
+      <li><strong>script.js</strong> - contains all custom script</li>
+		</ol> 
+		<p><strong>script.js</strong> contains custom scripts and scripts to call method for above plugin. The file is separated in to sections with appropriate label.</p>
+  <pre class="prettyprint lines">	
+/* Fix menu
+---------------------------------------------------------- */ 	
+
+{SOME CODES}
+
+/* Responsive menu & slide
+---------------------------------------------------------- */	
+
+{SOME CODES}
+
+/* Tabs
+---------------------------------------------------------- */	
+
+{SOME CODES}
+
+/* Cycle Slide
+---------------------------------------------------------- */   
+
+{SOME CODES}
+
+/* Features effect
+---------------------------------------------------------- */   
+
+{SOME CODES}
+
+/* Lavalamp menu
+---------------------------------------------------------- */	
+
+{SOME CODES}
+
+</pre>		
+</div><!--wrapper-->
+<div class="wrapper">
+	<h3 id="credits"><strong>IV) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+	<p>I've used the following images, icons, js, css files as listed.</p>
+	<ul>
+		<li><a target="_blank" href="http://www.jquery.com">jQuery</a></li>
+        <li><a target="_blank" href="http://www.jqueryui.com">jQuery UI</a></li>
+        <li><a target="_blank" href="http://jquery.malsup.com/cycle2/">jQuery Cycle 2</a></li>
+        <li><a target="_blank" href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing</a></li>
+        <li><a target="_blank" href="http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/">jQuery lavalamp</a></li>
+        <li><a target="_blank" href="http://flesler.blogspot.com">jQuery.ScrollTo</a></li>
+        <li><a target="_blank" href="http://modernizr.com/"></a>Modernizr 2.6.2</li>
+        <li><a target="_blank" href="https://github.com/digital-telepathy/origami">Origami</a></li>
+        <li><a target="_blank" href="https://github.com/viljamis/responsive-nav.js">Responsive Nav</a></li>
+        <li><a href="http://necolas.github.io/normalize.css/" target="_blank">Normalize.css</a></li>
+	</ul>
+</div>
+<div class="wrapper">
+	<p>Thank you so much for purchasing this theme. If you have any question relating to the themes please post your question to support forum <a href="http://wpprime.com/forum/site-templates/buzz-template">http://wpprime.com/forum</a></p> 
+	<p class="append-bottom alt large"><strong>MegaDrupal</strong><br>
+    Email: <a href="mailto:info@megadrupal.com">info@megadrupal.com</a><br>
+	Website: <a href="http://megadrupal.com">http://megadrupal.com</a><br>
+	<p><a href="#toc">Go To Table of Contents</a></p>
+</div>
+</body>
+<script type="text/javascript" src="assets/prettify/prettify.js"></script>
+	<script> prettyPrint(); </script>
+</html>
